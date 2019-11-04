@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700&display=swap&subset=latin-ext,vietnamese"
+        rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- remixicon -->
+    <link href="https://cdn.remixicon.com/releases/v2.0.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css' />
+
+    <!-- plugins.min.css -->
+    <link rel="stylesheet" href="plugins.min.css">
+    <!-- style.css -->
+    <link rel="stylesheet" href="main.css">
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <header class="header header-transparent header-sticky  d-lg-block d-none">
+        <div class="header-deafult-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3 col-lg-2 col-md-4 col-12">
+
+                        <div class="logo-area">
+                            <a href="index.php"><img src="images/common/logo.png" alt=""></a>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-4 d-none d-lg-block col-12">
+
+                        <div class="header-menu-area text-center">
+                            <nav class="main-menu">
+                                <ul>
+                                    <li class="active"><a href="index.php">Trang chủ</a></li>
+                                    <li><a href="product-list.php">Chợ hoa tươi</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="#">Hoa</a></li>
+                                            <li><a href="#">Lá</a></li>
+                                            <li><a href="#">Phụ kiện</a></li>
+                                            <li><a href="#">Cây có rễ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Về chúng tôi</a></li>
+                                    <li><a href="#">Liên hệ</a></li>
+
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-5 col-12">
+
+                        <div class="header-search-cart-area">
+                            <ul>
+                                <li><a class="header-search-toggle" href="#"><i class="ri-search-line"></i></a></li>
+                                <!-- <li class="currency-menu"><a href="#"><i class="flaticon-user"></i></a>
+
+                  <ul class="currency-dropdown">
+
+                    <li><a href="#">language</a>
+                      <ul>
+                        <li class="active"><a href="#"><img src="./assets/images/icons/en-gb.png" alt="">English</a>
+                        </li>
+                        <li><a href="#"><img src="./assets/images/icons/de-de.png" alt="">French</a></li>
+                      </ul>
+                    </li>
+
+
+                    <li><a href="#">Currency</a>
+                      <ul>
+                        <li><a href="#"> € Euro</a></li>
+                        <li><a href="#"> $ US Dollar</a></li>
+                      </ul>
+                    </li>
+
+
+                    <li><a href="my-account.html">My account</a>
+                      <ul>
+                        <li><a href="login-register.html">Login</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="my-account.html">My account</a></li>
+                        <li><a href="cart.php">Cart</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                      </ul>
+                    </li>
+
+                  </ul>
+
+                </li> -->
+                                <li class="mini-cart">
+                                    <a href="#">
+                                        <i class="ri-shopping-bag-line"></i>
+                                        <span class="badge badge-danger badge-notif">1</span>
+                                    </a>
+
+                                    <div class="header-cart">
+                                        <ul class="cart-items">
+                                            <li class="single-cart-item">
+                                                <div class="cart-img">
+                                                    <a href="cart.php"><img
+                                                            src="assets/images/product/ball-cactus-in-flower-disc-P8EDNQP.jpg"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="cart-content">
+                                                    <h5 class="product-name"><a href="single-product.html">Achillea</a>
+                                                    </h5>
+                                                    <span class="product-quantity">1 ×</span>
+                                                    <span class="product-price">$278.00</span>
+                                                </div>
+                                                <div class="cart-item-remove">
+                                                    <a title="Remove" href="#"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </li>
+                                            <li class="single-cart-item">
+                                                <div class="cart-img">
+                                                    <a href="cart.php"><img
+                                                            src="assets/images/product/bouquet-of-blue-forget-me-not-isolated-on-white-PBPHTEF.jpg"
+                                                            alt=""></a>
+                                                </div>
+                                                <div class="cart-content">
+                                                    <h5 class="product-name"><a href="single-product.html">Aconitum</a>
+                                                    </h5>
+                                                    <span class="product-quantity">1 ×</span>
+                                                    <span class="product-price">$278.00</span>
+                                                </div>
+                                                <div class="cart-item-remove">
+                                                    <a title="Remove" href="#"><i class="far fa-trash-alt"></i></a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-total">
+                                            <h5>Subtotal :<span class="float-right">$39.79</span></h5>
+                                            <h5>Eco Tax (-2.00) :<span class="float-right">$7.00</span></h5>
+                                            <h5>VAT (20%) : <span class="float-right">$0.00</span></h5>
+                                            <h5>Total : <span class="float-right">$46.79</span></h5>
+                                        </div>
+                                        <div class="mb-3">
+                                            <a href="cart.php" class="btn btn-brand btn-block">View Cart</a>
+
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header-mobile d-block d-lg-none">
+        <div class="header-bottom menu-right">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="header-mobile-navigation d-block d-lg-none">
+                            <div class="row align-items-center">
+                                <div class="col-6 col-md-6">
+                                    <div class="header-logo">
+                                        <a href="index.html">
+                                            <img src="images/common/logo.png" class="img-fluid" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-6">
+                                    <div class="mobile-navigation text-right">
+                                        <div class="header-icon-wrapper">
+                                            <ul class="icon-list justify-content-end">
+                                                <li>
+                                                    <div class="header-cart-icon">
+                                                        <a href="cart.php"><i class="flaticon-shopping-cart"></i></a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="mobile-menu-icon"
+                                                        id="mobile-menu-trigger"><i class="fa fa-bars"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 d-flex d-lg-none">
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <div class="offcanvas-mobile-menu d-block d-lg-none" id="offcanvas-mobile-menu">
+        <a href="javascript:void(0)" class="offcanvas-menu-close" id="offcanvas-menu-close-trigger">
+            <i class="fa fa-times"></i>
+        </a>
+        <div class="offcanvas-wrapper">
+            <div class="offcanvas-inner-content">
+                <div class="offcanvas-mobile-search-area">
+                    <form action="#">
+                        <input type="search" placeholder="Search ...">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <nav class="offcanvas-navigation">
+                    <ul>
+                        <li class="menu-item-has-children"><a href="#">Trang chủ</a></li>
+                        <li class="menu-item-has-children"><a href="#">Home</a>
+                            <ul class="submenu2">
+                                <li><a href="index.html">Home 01</a></li>
+                                <li><a href="index-2.html">Home 02</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="#">Shop</a>
+                            <ul class="submenu2">
+                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                    <ul class="submenu2">
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="compare.html">Compare</a></li>
+                                        <li><a href="cart.php">Shopping Cart</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="login-register.html">Login Register</a></li>
+                                        <li><a href="faq.html">Frequently Questions</a></li>
+                                        <li><a href="404.html">Error 404</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Shop Layout</a>
+                                    <ul class="submenu2">
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-three-column.html">Shop Three Column</a></li>
+                                        <li><a href="shop-four-column.html">Shop Four Column</a></li>
+                                        <li><a href="shop-right-sidebar.html">Shop Right Sidebar</a></li>
+                                        <li><a href="shop-list-nosidebar.html">Shop List No Sidebar</a></li>
+                                        <li><a href="shop-list-left-sidebar.html">Shop List Left Sidebar</a>
+                                        </li>
+                                        <li><a href="shop-list-right-sidebar.html">Shop List Right
+                                                Sidebar</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Product Details</a>
+                                    <ul class="submenu2">
+                                        <li><a href="single-product.html">Single Product</a></li>
+                                        <li><a href="single-product-variable.html">Variable Product</a></li>
+                                        <li><a href="single-product-affiliate.html">Affiliate Product</a>
+                                        </li>
+                                        <li><a href="single-product-group.html">Group Product</a></li>
+                                        <li><a href="single-product-tabstyle-2.html">Product Left Tab</a>
+                                        </li>
+                                        <li><a href="single-product-tabstyle-3.html">Product Right Tab</a>
+                                        </li>
+                                        <li><a href="single-product-gallery-left.html">Product Gallery
+                                                Left</a></li>
+                                        <li><a href="single-product-gallery-right.html">Product Gallery
+                                                Right</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Product Details</a>
+                                    <ul class="submenu2">
+                                        <li><a href="single-product-sticky-left.html">Product Sticky
+                                                Left</a></li>
+                                        <li><a href="single-product-sticky-right.html">Product Sticky
+                                                Right</a></li>
+                                        <li><a href="single-product-slider-box.html">Product Box Slider</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="shop.html">New Arrivals</a></li>
+                        <li class="menu-item-has-children"><a href="#">Pages</a>
+                            <ul class="submenu2">
+                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="blog-two-column.html">Blog Two Column</a></li>
+                                <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                                <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                                <li><a href="blog-details.html">Blog Details</a></li>
+                                <li><a href="blog-details-gallery.html">Blog Details Gallery</a></li>
+                                <li><a href="blog-details-audio.html">Blog Details Audio</a></li>
+                                <li><a href="blog-details-video.html">Blog Details Video</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children"><a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="offcanvas-settings">
+                    <nav class="offcanvas-navigation">
+                        <ul>
+                            <li class="menu-item-has-children"><a href="#">MY ACCOUNT </a>
+                                <ul class="submenu2">
+                                    <li><a href="login-register.html">Login</a></li>
+                                    <li><a href="checkout.html">Checkout</a></li>
+                                    <li><a href="my-account.html">My account</a></li>
+                                    <li><a href="cart.php">Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">CURRENCY: USD </a>
+                                <ul class="submenu2">
+                                    <li><a href="javascript:void(0)">€ Euro</a></li>
+                                    <li><a href="javascript:void(0)">$ US Dollar</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children"><a href="#">LANGUAGE: EN-GB </a>
+                                <ul class="submenu2">
+                                    <li><a href="javascript:void(0)"><img src="./assets/images/icons/en-gb.png" alt="">
+                                            English</a></li>
+                                    <li><a href="javascript:void(0)"><img src="./assets/images/icons/de-de.png" alt="">
+                                            Germany</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="offcanvas-widget-area">
+                    <div class="off-canvas-contact-widget">
+                        <div class="header-contact-info">
+                            <ul class="header-contact-info-list">
+                                <li><i class="ion-android-phone-portrait"></i> <a href="tel://12452456012">(1245) 2456
+                                        012 </a></li>
+                                <li><i class="ion-android-mail"></i> <a
+                                        href="/cdn-cgi/l/email-protection#8de4e3ebe2cdf4e2f8ffe9e2e0ece4e3a3eee2e0"><span
+                                            class="__cf_email__"
+                                            data-cfemail="b9d0d7dfd6f9c0d6cccbddd6d4d8d0d797dad6d4">[email&#160;protected]</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="off-canvas-widget-social">
+                        <a href="#" title="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#" title="Vimeo"><i class="fa fa-vimeo-square"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-search-active">
+        <div class="sidebar-search-icon">
+            <button class="search-close"><i class="fa fa-times"></i></button>
+        </div>
+        <div class="sidebar-search-input">
+            <form action="#">
+                <div class="form-search">
+                    <input id="search" class="input-text" value="" placeholder="" type="search">
+                    <button>
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </form>
+
+            <p class="form-description">Nhấn Enter để search hoặc nhấn ESC để đóng</p>
+        </div>
+    </div>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        document.querySelectorAll('.header-menu-area .main-menu > ul > li > a').forEach(function (el, index) {
+            var baseUrl = location.pathname.split("/").pop(),
+                url = el.href.split("/").pop();
+            (url == baseUrl || baseUrl == '' && url == 'index.php') ? el.closest('li').classList.add('active') : 0;
+        });
+    </script>
+
+    <div class="hero-section position-relative">
+        <div class="hero-slider ">
+
+            <div class="hero-item dark-style bg-image" data-bg="images/image.jpg">
+                <div class="container h-100 flex-center justify-content-start">
+                    <div class="row">
+                        <div class="col-12">
+
+                            <div class="hero-content-2  mt-0">
+                                <h2 class="mb-32 title">The luxury <br>
+                                    for The Gentleman</h2>
+                                <p class="mb-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </h2>
+                                <a href="shop.html" class="btn btn-black">Tìm hiểu thêm</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-item dark-style bg-image" data-bg="images/image.jpg">
+                <div class="container h-100 flex-center justify-content-start">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="hero-content-2  mt-0">
+                                <h2 class="mb-32 title">Hoa hồng</h2>
+                                <h4 class="text-white mb-4">Mỗi bông hồng hé nở mang đến lời chào mừng của một mùa xuân
+                                    vĩnh hằng.</h4>
+                                </h2>
+                                <a href="shop.html" class="btn btn-black">Tìm hiểu thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class='section features-collection'>
+        <div class='container'>
+            <h1 class='title font-40 mb-12'>Features Collection</h1>
+            <div class='sub-title mb-32'>NEW COLLECTION</div>
+            <div class='content-container'>
+                <div class='row'>
+                    <div class='col-lg-3 col-sm-6'>
+                        <div class='box-img text-white' style="background-image: url('images/collection1.jpg');">
+                            <h2 class='title mb-12'>Collection</h2>
+                            <div class='sub-title mb-32'>NEW COLLECTION</div>
+                            <a href='#' class='btn btn-white'>Read more</a>
+                        </div>
+                    </div>
+                    <div class='col-lg-3 col-sm-6'>
+                        <div class='box-img text-white' style="background-image: url('images/collection1.jpg');">
+                            <h2 class='title mb-12'>Collection</h2>
+                            <div class='sub-title mb-32'>NEW COLLECTION</div>
+                            <a href='#' class='btn btn-white'>Read more</a>
+                        </div>
+                    </div>
+                    <div class='col-lg-6 col-sm-12'>
+                        <div class='box-img text-white' style="background-image: url('images/collection1.jpg');">
+                            <h2 class='title mb-12'>Collection</h2>
+                            <div class='sub-title mb-32'>NEW COLLECTION</div>
+                            <a href='#' class='btn btn-white'>Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='section content-text'>
+        <div class='container'>
+            <div class='box-img d-flex justify-content-center mnHeight-300 align-items-center'
+                style="background-image: url('images/collection1.jpg');">
+                <h3 class="mb-0 w-80  text-white">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua."</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class='section list-product'>
+        <div class='container'>
+            <h1 class='title font-40 mb-32'>Features Collection</h1>
+            <div class='row'>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6 mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-6  mb-32'>
+                    <div class='card-product'>
+                        <div class='img-product box-img-persent d-flex align-items-end mb-32'
+                            style="background-image: url('images/collection1.jpg');">
+                            <div class='content icon-action text-white font-20'>
+                                    <a><i class="ri-heart-line"></i></a>
+                                    <!-- <i class="ri-heart-fill"></i> -->
+                                    <a><i class="ri-shopping-bag-line"></i></a>
+                                    <!-- <i class="ri-shopping-bag-fill"></i> -->
+                            </div>
+                        </div>
+                        <div class="mb-12 name font-16">Luxury Shoes</div>
+                        <div class='price'>1.000.000 VNĐ</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END CONTENT -->
+
+    <div
+        class="newsletter-section section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-95 pb-lg-75 pb-md-65 pb-sm-60 pb-xs-50 ">
+        <div class="container">
+            <div class="newsletter text-center">
+                <div class="newsletter-form">
+                    <h1><b>Follow us to get the latest updates</b></h1>
+                    <form id="mc-form" class="mc-form form-group d-flex justify-content-center">
+                        <input type="email" placeholder="Email" class="form-control " required>
+                        <button type="submit" value="submit" class=" btn btn-brand">Send</button>
+                    </form>
+                </div>
+
+                <div class="mailchimp-alerts">
+                    <div class="mailchimp-submitting"></div>
+                    <div class="mailchimp-success"></div>
+                    <div class="mailchimp-error"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer-section ">
+
+        <div
+            class="footer-top  pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-55 pb-lg-35 pb-md-25 pb-sm-15 pb-xs-10">
+            <div class="container">
+                <div class="row">
+
+                    <div class="footer-widget col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-40 mb-xs-35">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                            laudantium.</p>
+                    </div>
+                    <div class="footer-widget col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-40 mb-xs-35">
+                        <h4 class="title"><span class="text">Quick Link</span></h4>
+                        <p class="mb-15">Thứ 2 – 6: 8AM – 10PM</p>
+                        <p class="mb-15">Thứ 7: 9AM-8PM</p>
+                        <p class="mb-15">Chủ nhật: Closed</p>
+                    </div>
+
+
+                    <div class="footer-widget col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-40 mb-xs-35">
+                        <h4 class="title"><span class="text">Quick Link</span></h4>
+                        <p class="mb-15">Thứ 2 – 6: 8AM – 10PM</p>
+                        <p class="mb-15">Thứ 7: 9AM-8PM</p>
+                        <p class="mb-15">Chủ nhật: Closed</p>
+                    </div>
+
+
+
+                    <div class="footer-widget col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 mb-40 mb-xs-35">
+                        <h4 class="title"><span class="text">Social Link</span></h4>
+                        <div class='social-icon'></div>
+                        <form id="mc-form" class="mc-form form-group d-flex justify-content-center">
+                            <input type="email" placeholder="Email" class="form-control " required>
+                            <button type="submit" value="submit" class=" btn btn-brand"
+                                style="border-color: #fff">Send</button>
+                        </form>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="copyright text-center">
+                    <p>Copyright @2019 Last Shoes. All Right Reserved</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./plugins/js/plugins/plugins.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
