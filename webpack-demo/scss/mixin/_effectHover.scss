@@ -1,0 +1,91 @@
+@mixin transition-3s {
+    transition: all 0.3s;
+}
+@mixin hoverTopBottomLine {
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 0%;
+        left: 0;
+        top: -8px;
+        background: $color-border;
+    }
+    &:after {
+        left: auto;
+        right: 0;
+        top: calc(100% + 8px);
+        @include transition-3s();
+    }
+    &:hover {
+        &:before,
+        &:after {
+            width: 40%;
+            @include transition-3s();
+        }
+    }
+    *:disabled ,
+    &.disabled{ 
+        &:before,
+        &:after {
+            width: 0%;
+        }
+    }
+}
+@mixin hoverLineBottom($color: $brand, $size: 2px) {
+    border-bottom: $size solid transparent;
+    @include transition-3s();
+
+    input:checked + *,
+    &:hover,
+    &.active {
+        border-bottom-color: $color;
+        @include transition-3s();
+    }
+    
+    &.disabled{
+        border-bottom-color: transparent;
+    }
+}
+
+@mixin hoverCheckedLineBottom($color: $brand, $size: 1px) {
+    .content {
+        border-bottom: $size solid transparent;
+        @include transition-3s();
+    }
+    input:checked +,
+    &:hover,
+    &.active {
+        & .content {
+            border-bottom-color: $color;
+        }
+    }
+    input:disabled {
+        & + .content {
+            border-bottom-color: transparent;
+        }
+    }
+}
+@mixin x-box($color: $border-check) {    
+    &:before,
+    &:after {
+        content: "";
+        height: 150%;
+        position: absolute;
+        left: 50%;
+        top: -25%;
+        width: 1px;
+        background: $color;
+        transform: rotate(45deg);
+        z-index: 0;
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    &>* {
+        position: relative;
+        z-index: 1;
+    }
+}

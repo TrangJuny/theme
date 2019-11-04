@@ -1,0 +1,41 @@
+@each $hex, $name in $base-color-text {
+    &.text-#{$name} {
+        color: $hex;
+    }
+}
+@each $size in $base-font-size {
+    &.font-#{$size} {
+        font-size: #{$size}px;
+    }
+}
+
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 32px;
+}
+.font-w-600 {
+    font-weight: 600;
+}
+.title {
+    // font-size: 40px;
+    font-weight: 800;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: inherit;
+}
+.sub-title {
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 2px;
+    color: inherit;
+}
+.text-line-through {
+    text-decoration: line-through;
+}

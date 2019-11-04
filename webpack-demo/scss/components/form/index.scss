@@ -1,0 +1,31 @@
+@import "buttons";
+@import "checkbox-radio";
+@import "date_time";
+@import "input_group";
+@import "select";
+@import "slider";
+
+// .form-control {
+// 	height: calc(2.25rem + 6px);
+// }
+
+.form-control {
+    border-radius: 0;
+    outline: none;
+    // font-family: Muli;
+    border-color: $border-input;
+    font-size: 14px;
+    // color: $brand;
+    min-height: $heightControl;
+
+    &:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: $border-input;
+        outline: 0;
+        box-shadow: none !important;
+    }
+    &.form-control-sm {
+        height: calc(1.8125rem + 6px);
+    }
+}

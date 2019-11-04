@@ -1,0 +1,273 @@
+/* =============
+   Checkbox and Radios
+============= */
+
+.checkbox {
+    > label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+
+        &:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid $text-secondary;
+            transition: all 0.3s ease;
+        }
+    }
+
+    input {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+
+        // Box focus
+        &:focus + label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+
+        // Disabled state label.
+        &:disabled + label {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+
+        // Disabled box.
+        &:disabled + label:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+        &:active + label {
+            &:before {
+                box-shadow: 0 0 0 8px rgba(#37474f, 0.15);
+            }
+        }
+        // Checkmark. Could be replaced with an image
+        &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 7px;
+            display: table;
+            width: 5px;
+            height: 10px;
+            border: 1px solid white;
+            border-top-width: 0;
+            border-left-width: 0;
+            transform: rotate(45deg);
+        }
+        // Box hover
+        &:hover + label:before,
+        &:checked + label:before {
+            background: blue;
+            border: 2px solid blue;
+        }
+    }
+
+    &.rounded {
+        > label:before {
+            border-radius: 50%;
+        }
+    }
+
+    @each $hex, $name in $base-color {
+        @if $name != "white" and $name != "light" {
+            &.checkbox-#{$name} {
+                input {
+                    // Box hover
+                    &:hover + label:before,
+                    &:checked + label:before {
+                        background: $hex;
+                        border: 2px solid $hex;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.radio {
+    > label {
+        position: relative;
+        cursor: pointer;
+        padding: 0;
+
+        &:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid $text-secondary;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+        }
+        &:after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 9px;
+            left: 4px;
+        }
+    }
+
+    input {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+
+        // Box focus
+        &:focus + label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+        }
+
+        // Disabled state label.
+        &:disabled + label {
+            color: #b8b8b8;
+            cursor: auto;
+        }
+
+        // Disabled box.
+        &:disabled + label:before {
+            box-shadow: none;
+            background: #ddd;
+        }
+        &:active + label {
+            &:before {
+                box-shadow: 0 0 0 8px rgba(#37474f, 0.15);
+            }
+        }
+        // Checkmark. Could be replaced with an image
+        &:checked + label:after {
+            // position: absolute;
+            // left: 7px;
+            // top: 7px;
+            // display: table;
+            // width: 5px;
+            // height: 10px;
+            // border: 1px solid white;
+            // border-top-width: 0;
+            // border-left-width: 0;
+            // transform: rotate(45deg);
+        }
+        // Box hover
+        &:hover + label:after,
+        &:checked + label:after {
+            transform: scale(1);
+            background-color: blue;
+        }
+        &:hover + label:before,
+        &:checked + label:before {
+            border: 2px solid blue;
+        }
+    }
+
+    &.rounded {
+        > label:before {
+            border-radius: 50%;
+        }
+    }
+
+    @each $hex, $name in $base-color {
+        @if $name != "white" and $name != "light" {
+            &.radio-#{$name} {
+                input {
+                    // Box hover
+                    &:hover + label:after,
+                    &:checked + label:after {
+                        background-color: $hex;
+                    }
+
+                    &:hover + label:before,
+                    &:checked + label:before {
+                        border: 2px solid $hex;
+                    }
+                }
+            }
+        }
+    }
+}
+.radio-box {
+    display: flex;
+    .active,
+    .item-active {
+        opacity: 0;
+        transition: all 0.3s;
+    }
+    input {
+        display: none;
+        &:checked {
+            & + {
+                .active,
+                .item-active {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .container-radio-box {
+        width: 48px;
+        height: 48px;
+        border: solid 1px $border-check;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 0;
+        position: relative;
+
+        input:checked +,
+        &:focus,
+        &:active,
+        &:hover {
+            .item-active {
+                opacity: 1;
+                transition: all 0.3s;
+            }
+        }
+        &.hover-checked-line {
+            @include hoverCheckedLineBottom($border-check);
+        }
+
+        input {
+            display: none;
+            // Disabled state label.
+            &:disabled {
+                & + .item-active {
+                    opacity: 1;
+                    display: none;
+                }
+            }
+        }
+    }
+
+    label{
+        &:disabled,
+        &.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+
+            .item-active{
+                display: none;
+            }
+            &.x-box{
+                @include x-box();
+                opacity: 1;
+            }
+        }
+
+    }
+
+}

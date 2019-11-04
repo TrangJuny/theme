@@ -1,0 +1,32 @@
+.content-modal {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #151515;
+}
+.modal-content {
+    // border: none;
+}
+.modal{
+    button.close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        margin: 0;
+        z-index: 1;
+    }
+}
+
+.modal-header {
+    justify-content: center;
+    border: none;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 30px;
+    padding-bottom: 0;
+}

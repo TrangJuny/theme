@@ -1,0 +1,14 @@
+.tabs-border-bottom{
+    .nav-link {
+        border-width: 0;
+        font-size: 16px;
+    }
+    
+    .nav-item.show .nav-link,
+    .nav-link.active {
+        border-bottom: 3px solid $brand;
+        font-weight: 800;
+
+
+    }
+}

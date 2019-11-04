@@ -1,0 +1,123 @@
+.btn {
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    // background-color: #020202;
+    font-family: $common-font;
+    display: inline-flex;
+    align-items: center;
+    // color: $white;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 500;
+    height: $heightControl;
+    padding: 10px 24px;
+    // text-transform: uppercase;
+    border-radius: 0px;
+    position: relative;
+    // border-radius: $rounded;
+    transition: all 0.3s ease 0s;
+    // min-width: 200px;
+
+    // &:hover {
+    //     background-color: $heading-color;
+    //     color: $white;
+    // }
+    @include hoverTopBottomLine();
+    // Responsive
+    @media #{$large-mobile} {
+        font-size: 14px;
+        line-height: 23px;
+        height: $heightControl;
+        padding: 10px 25px;
+
+        &:hover {
+            &::before {
+                left: 6px;
+                top: 6px;
+            }
+
+            &::after {
+                left: -6px;
+                top: -6px;
+            }
+        }
+    }
+
+    @media #{$small-mobile} {}
+
+    @media #{$extra-small-mobile} {}
+
+    @each $hex,
+    $name in $base-color {
+        &.btn-#{$name} {
+            @if ($name=='white') {
+                background-color: $hex;
+                color: #020202;
+            }
+
+            @else {
+                background-color: $hex;
+                color: white;
+            }
+            &:before,
+            &:after{
+                background: $hex;
+            }
+            // &:hover {
+            //     background-color: darken($hex, 5%);
+            // }
+        }
+        &.btn-outline-#{$name} {
+            border-color: $hex;
+            background-color: white;
+            color: $hex;
+            &:hover {
+                background-color: $hex;
+                color: white;
+            }
+        }
+    }
+    .btn-main {
+        font-family: $common-font;
+        font-size: 12px;
+        line-height: 1.2;
+        font-weight: 500;
+        padding: 12px 24px;
+        text-transform: uppercase;
+        color: $white;
+        background: $color-border;
+        border: solid 1px $color-border;
+        position: relative;
+    
+        &:hover {
+            &:before,
+            &:after{
+                content:'';
+                position: absolute;            
+                height: 2px;
+                width: 40%;
+                left: 0;
+                top: -5px;
+                background: $color-border;
+            }
+            &:after{
+                left: auto;
+                right: 0;
+                top: calc( 100% + 5px);
+            }
+            
+        }
+    }
+}
+
+.btn-group-sm>.btn, .btn-sm{
+    // padding: .25rem .5rem;
+    padding: 9px 18px;
+}
+// .btn-link{
+//     font-weight: 800;
+// }
+

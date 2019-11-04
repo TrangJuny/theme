@@ -1,0 +1,21 @@
+// home
+
+.box-img {
+    @include boxImgBlack();
+    padding: 30px;
+}
+.box-img-persent {
+    @include imgPersent(100%);
+
+    .content {
+        padding: 15px;
+        a {
+            margin-right: 20px;
+
+            @include hoverLineBottom(#fff);
+        }
+    }
+}
+.hover-line-bottom {
+    @include hoverLineBottom(#000,1px);
+}

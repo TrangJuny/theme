@@ -1,0 +1,108 @@
+@mixin flex-center-x{
+	display: flex;
+	justify-content: center;
+}
+
+@mixin flex-center-y{
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-between{
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-center-x{
+	display: flex;
+	justify-content: center;
+}
+
+.flex-center-y{
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-center-dynamic($display){
+	display: $display;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin pos-f($value){
+	position: absolute;
+	top: #{$value + 'px'};
+	left: #{$value + 'px'};
+	right: #{$value + 'px'};
+	bottom: #{$value + 'px'};
+}
+
+@for $i from 1 through 9 {
+	.font-weight-#{$i}00 { 
+		font-weight: #{$i + '00'}; 
+	}
+}
+
+@mixin pos-y-center{
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin pos-x-center{
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin pos-center{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin hide{
+	opacity: 0;
+    visibility: hidden;
+}
+
+@mixin show{
+	opacity: 1;
+    visibility: visible;
+}
+
+/* Clearfix */ 
+@mixin clearfix{
+    &:before {
+        display: table;
+        content: " ";
+    }
+    &::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+	position: relative;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: ($height / $width) * 100%;
+	}
+	>.content {
+		@include pos-f(0);
+	}
+}

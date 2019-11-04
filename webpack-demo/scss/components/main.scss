@@ -1,0 +1,18 @@
+// @import 'form/buttons';
+// @import 'dataTable';
+@import 'form/index';
+@import "modal/main";
+@import "tabs";
+
+.badge {
+	border-radius: $rounded-theme;
+	font-weight: 500;
+	padding: 4px 8px;
+}
+
+@each $hex, $name in $base-color {
+	.badge-#{$name} {
+		color: white;
+    	background-color: $hex;
+	}
+}

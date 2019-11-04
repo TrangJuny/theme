@@ -1,0 +1,16 @@
+@import "footer";
+@import "header";
+@import "home";
+// @import 'sidebar';
+a{
+    color: $brand;
+    &:hover{
+        color: $hover;
+    }
+}
+.mnHeight-300 {
+    min-height: 300px;
+}
+.w-80 {
+    width: 80%;
+}

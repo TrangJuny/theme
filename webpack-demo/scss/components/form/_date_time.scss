@@ -1,0 +1,62 @@
+.datepicker {
+    z-index: 9999 !important;
+
+    td,
+    th {
+        width: 40px;
+        height: 35px;
+    }
+
+    .datepicker-switch {
+        font-size: 18px;
+        padding: 9px 0;
+    }
+
+    .datepicker-days {
+        padding: 10px;
+        width: 100%
+    }
+}
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active[disabled],
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active.disabled:hover[disabled] {
+    background: $brand;
+}
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:hover {
+    background: transparent;
+    color: $brand;
+}
+
+
+.date .form-control {
+    letter-spacing: 2px;
+    color: #454545;
+}
+
+// .input-group.is-invalid * {
+//     border-color: $brand;
+//     box-shadow: none;
+// }
+.input-group.is-invalid ~ .invalid-feedback {
+    display: block;
+}

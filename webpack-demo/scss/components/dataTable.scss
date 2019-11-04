@@ -1,0 +1,67 @@
+.cart-table .table thead tr th {
+    font-size: 14px;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background: #fff;
+}
+
+.cart-table {
+    margin-top: 24px;
+    .table {
+        border: none;
+        border-width: 1px;
+        a {
+            color: green;
+        }
+        tfoot tr td {
+            padding: 5px 20px; 
+            border-width: 0;
+        }
+        tbody,
+        tfoot,
+        .table {
+            border-width: 1px;
+        }
+        tfoot tr:first-child td {
+            padding-top: 15px;
+        }
+    }
+}
+.table-striped tbody tr:hover {
+    background: #e9f0ed;
+}
+
+a.page-link {
+    border: navajowhite;
+}
+
+.page-item.active .page-link {
+    background: none;
+    color: $brand;
+    font-weight: 600;
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_info {
+    color: #b9c1ce;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+    margin: 0 8px;
+}
+
+.hide-first-item {
+    td,
+    th {
+        &:first-child {
+            display: none;
+        }
+    }
+}
+.img-small-table {
+    img {
+        width: 100px;
+        height: 120px;
+        object-fit: cover;
+    }
+}

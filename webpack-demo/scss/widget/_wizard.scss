@@ -1,0 +1,316 @@
+// /* Wizard */
+// .card-wizard{
+// 	.card-description{
+
+// 	}
+// }
+
+// .wizard-tabs{
+// 	@include flex-between;
+// 	margin: 30px 0 40px;
+// 	.wizard-item{
+// 		text-align: center;
+// 		position: relative;
+// 		z-index: 1;
+// 		&:before{
+// 			content: '';
+// 			position: absolute;
+// 			top: 25px;
+// 			left: 0;
+// 			right: 0;
+// 			background-color: $border-theme;
+// 			height: 4px;
+// 			z-index: 0;
+// 			transition: background-color .3s;
+// 		}
+// 		&:first-child{
+// 			&:before{
+// 				left: 50%;
+// 			}
+// 		}
+// 		&:last-child{
+// 			&:before{
+// 				right: 50%;
+// 			}
+// 		}
+// 		// Success
+// 		&.success{
+// 			.wizard-icon{
+// 				background-color: $green;
+// 				>i{
+// 					&:before{
+// 						display: inline-block;
+// 						font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+// 						font-size: inherit;
+// 						text-rendering: auto;
+// 						-webkit-font-smoothing: antialiased;
+// 						-moz-osx-font-smoothing: grayscale;
+// 						content: '\f26b';
+// 					}
+// 					.number-step{ display: none; }
+// 					color: $white;
+// 					@include flex-center;
+// 				}
+// 			}
+// 			.wizard-content{
+// 				.title{
+// 					color: $green;
+// 				}
+// 			}
+// 			&:before{
+// 				background-color: $green;
+// 			}
+// 		}
+// 		// Active
+// 		&.active{
+// 			.wizard-icon{
+// 				background-color: $teal;
+// 				>i{
+// 					color: $white;
+// 					@include flex-center;
+// 				}
+// 			}
+// 			.wizard-content{
+// 				.title{
+// 					color: $teal;
+// 				}
+// 			}
+// 			&:before{
+// 				background-color: $teal;
+// 			}
+// 		}
+// 		.wizard-icon{
+// 			position: relative;
+// 			text-decoration: none;
+// 		}
+// 		.wizard-content{
+// 			color: $text-secondary;
+// 			.title{
+// 				margin: 5px 0;
+// 				font-weight: bolder;
+// 			}
+// 		}
+// 	}
+// 	.wizard-icon{
+// 		display: inline-flex;
+// 		background-color: $border-theme;
+// 		border-radius: $rounded;
+// 		transition: background-color .3s;
+// 		>i{
+// 			color: $text-secondary;
+// 			width: 50px;
+// 			height: 50px;
+// 			line-height: 51px;
+// 			font-size: 1.4em;
+// 			font-style: normal;
+// 			text-align: center;
+// 		}
+// 	}
+// }
+
+// .wizard-content{
+// 	.wizard-pane{
+// 		display: none;
+// 		&.active{
+// 			display: block;
+// 			animation-duration: .5s;
+// 			animation-fill-mode: both;
+// 			animation-name: fadeIn;
+// 		}
+// 	}
+// }
+
+
+// .wizard-tabs-pills{
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	padding-left: 0;
+// 	margin-bottom: 0;
+// 	list-style: none;
+// 	.wizard-item{
+// 		position: relative;
+// 		display: block;
+// 		color: $text-primary;
+// 		margin: 0 10px 0 0;
+// 		padding: .5rem 1rem .5rem 38px;
+// 		font-weight: 400;
+// 		font-size: 14px;
+// 		border-radius: 30px;
+// 		text-decoration: none;
+// 		transition: background-color .3s ease , border .3s ease;
+// 		@include flex-center-y;
+// 		&:hover{
+// 			background-color: #f9f9f9;
+// 		}
+// 		>span{
+// 			position: absolute;
+// 			left: 10px;
+// 			width: 20px;
+// 			height: 20px;
+// 			border-radius: 30px;
+// 			font-size: 80%;
+// 			font-weight: 600;
+// 			background-color: #e6e6e6;
+// 			color: $text-primary;
+// 			@include flex-center;
+// 		}
+// 		&.active, &.success{
+// 			color: $white;
+// 			>span{
+// 				background-color: $white;
+// 				color: $text-secondary;
+// 			}
+// 			&:before{
+// 				content: '';
+// 				position: absolute;
+// 			}
+// 		}
+// 		&.active{
+// 			background-color: $brand;
+// 			&:hover{
+// 				background-color: darken($brand, 5%);
+// 			}
+// 		}
+// 		&.success{
+// 			background-color: $green;
+// 			&:hover{
+// 				background-color: darken($green, 5%);
+// 			}
+// 		}
+// 		&.plus{
+// 			padding: 0;
+// 			margin: 0;
+// 			display: none;
+// 			>i{
+// 				display: block;
+// 				color: $text-primary;
+// 				background-color: #e6e6e6;
+// 				width: 37px;
+// 				height: 37px;
+// 				border-radius: 30px;
+// 				@include flex-center;
+// 			}
+// 		}
+// 	}
+// 	.dropdown-menu:not(.datepicker):not(.bootstrap-datetimepicker-widget){
+// 		margin-top: 5px !important;
+// 		transform: translate3d(0,0,0)!important;
+// 		right: 0;
+// 		top: 40px!important;
+// 		.wizard-item{
+// 			width: max-content;
+// 			margin: 0 0 10px 0;
+// 			color: $text-primary;
+// 			&.active, &.success{
+// 				color: $white;
+// 				+.active, &.success{
+// 					&:before{
+// 						top: -10px;
+// 						left: 18px;
+// 						height: 10px;
+// 					}
+// 				}
+// 			}
+// 			&.active{
+// 				+.active{
+// 					&:before{
+// 						border-left: 3px solid $brand;
+// 					}
+// 				}
+// 			}
+// 			&.success{
+// 				+.active, +.success{
+// 					&:before{
+// 						border-left: 3px solid $green;
+// 					}
+// 				}
+// 			}
+// 			&:last-child{
+// 				margin: 0;
+// 			}
+// 		}
+// 	}
+// 	>.wizard-item{
+// 		&.active, &.success{
+// 			+.active, +.success{
+// 				&:before{
+// 					top: 50%;
+// 					left: -10px;
+// 					width: 10px;
+// 					transform: translateY(-50%);
+// 				}
+// 			}
+// 		}
+// 		&.active{
+// 			+.active{
+// 				&:before{
+// 					border-top: 3px solid $brand;
+// 				}
+// 			}
+// 		}
+// 		&.success{
+// 			+.active, +.success{
+// 				&:before{
+// 					border-top: 3px solid $green;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	@include media-breakpoint-down(md) {
+// 		>.wizard-item:not(:first-child):not(.plus){
+// 			display: none;
+// 		}
+// 		.wizard-item.plus{
+// 			display: block;
+// 		}
+// 	}
+// }
+
+.wizard-step-wrapper{
+	display: flex;
+	flex-wrap: nowrap;
+    justify-content: space-around;
+	.wizard-item{
+		position: relative;
+		display: block;
+		text-align: center;
+		width: 100%;
+		// max-width: 320px;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 15px;
+			border-bottom: 2px solid $border-theme;
+			z-index: 0;
+			transition: all .3s ease;
+		}
+		.number{
+			position: relative;
+			width: 32px;
+			height: 32px;
+			margin: 0 auto;
+			background-color: $border-theme;
+			border-radius: $rounded;
+			margin-bottom: 12px;
+			transition: all .3s ease;
+			@include flex-center;
+		}
+		.content{
+		}
+		&.active{
+			.content{
+				color: $brand;
+				font-weight: 600;
+			}
+			&:before{
+				border-bottom: 2px solid $brand;
+			}
+			.number{
+				color: white;
+				background-color: $brand;
+			}
+		}
+	}
+}
